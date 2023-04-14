@@ -1,0 +1,27 @@
+{% extends 'customer_navbar.html' %}
+{% block title %} Car Rent{% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/car-rent.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="car-rent">
+    <div class="container">
+        <h2>Car : {{car.name}}</h2>
+        <form class="w3-container" method="POST">
+            {% csrf_token %}
+            <h3>Price : ₹ {{cost_per_day}} per day</h3> <br>
+            <lable>How many days ? : </lable>
+            <input type="text" class="days-input" placeholder="" name="days"><br><br>
+            <lable>Which days ? : </lable>
+            <input type="date" class="days-input" placeholder="" name="date"><br><br>
+            <button class="btn" type="submit">Confirm</button><br><br>
+            <input type="hidden" value="{{car.id}}" name="id" />
+            <br><br>
+        </form>
+    </div>
+</section>
+{% endblock %}

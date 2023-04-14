@@ -1,0 +1,31 @@
+input{
+    border:none;
+    outline:none;
+}
+input[type="submit"]{
+    color:white;
+    background-color:var(--main-color);
+    padding:5px 10px;
+}
+.order-details .detail .btn{
+    width: 100%;
+}
+
+.order-details{
+    background-color: white;
+    box-shadow: 1px 2px 3px lightgray;
+    border-radius: 30px;
+    width: 35%;
+    padding: 30px 15px;
+    margin: auto;
+    margin-top: 100px !important;
+}
+
+.order-details .detail{
+    margin-top: 20px;
+    font-family: var(--montserrat);
+}
+
+.order-details h3{
+    font-family: var(--poppins);
+}

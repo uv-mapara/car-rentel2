@@ -1,0 +1,35 @@
+.search-car{
+    margin-top: 100px;
+}
+.search-car .head{
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: 40px;
+}
+.search-car .card img{
+    height: 200px;
+    width: 100%;
+}
+.search-car .card h5{
+    font-family: var(--montserrat);
+}
+.search-car .card h6{
+    font-family: var(--montserrat);
+}
+.search-car .card p{
+    font-family: var(--montserrat);
+}
+.search-car .card .btn{
+    font-family: var(--montserrat);
+    text-align: center;
+    color: var(--white-color);
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--main-color);
+}
+
+.search-car .card .location-seat{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}

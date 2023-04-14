@@ -1,0 +1,21 @@
+.update-car{
+    width: 25%;
+    margin: auto;
+    font-family: var(--montserrat);
+}
+.update-car .container{
+    margin-top: 100px;
+}
+.update-car label{
+    font-weight: 600;
+}
+.update-car select{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ced4da;
+}
+.update-car .btn{
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}

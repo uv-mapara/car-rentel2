@@ -1,0 +1,45 @@
+.customer-home{
+   margin-top: 100px;
+}
+
+.customer-home .customer-card{
+    
+}
+
+.customer-home .customer-card .head{
+    font-family: var(--poppins) !important;
+    font-size: 50px;
+    text-align: center;
+}
+.customer-card p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.customer-card form{
+    text-align: center;
+}
+.customer-card form lable{
+    font-size: 20px;
+    font-family: var(--montserrat);
+    font-weight: 500;
+}
+.customer-card form select{
+    width: 20%;
+    height: 40px;
+    padding:0 20px;
+    text-align: left;
+    border: 1px solid #ced4da;
+    font-family: var(--montserrat);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.customer-card form .btn{
+    background-color: var(--main-color);
+    margin: 0;
+    color: var(--white-color);
+    height: 40px;
+    margin-top: -8px;
+    font-family: var(--montserrat);
+    width: 12%;
+}

@@ -1,0 +1,59 @@
+.thank-you-area {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.thank-you-area .inner_complated .dsc_cmpted{
+    font-size: 30px;
+    font-family: var(--montserrat);
+    margin-top: 20px;
+}
+
+.inner_complated {
+    text-align: center;
+    margin-top: 100px;
+}
+.main_quickorder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 60px 0 0;
+}
+.main_quickorder .title {
+    font-size: 25px;
+    font-family: var(--montserrat);
+}
+
+.inner_complated .shop-btn{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--montserrat);
+    
+}
+.thank-you-area .main_quickorder .call_desk a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--montserrat);
+}

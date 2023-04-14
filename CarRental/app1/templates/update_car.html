@@ -1,0 +1,73 @@
+{% extends 'car_dealer_navbar.html' %}
+{% block title %} Customer Login {% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/update-car.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<section class="update-car">
+    <div class="container">
+        {% if car %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row mt-2">
+                <div class="form-group col-md-12">
+                    <label>Car Name</label>
+                    <input type="text" class="form-control" name="car_name" value="{{car.name}}" placeholder="Name of the Car">
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="form-group col-md-12">
+                    <label>City</label><br />
+                    <select name="city">
+                        <option value="{{car.location}}">{{car.location}}</option>
+                        {% for l in l %}                    
+                        <option value="{{l.city}}">{{l.city}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+              
+            </div>
+            <div class="row mt-3">
+                <div class="form-group col-md-12">
+                    <!--<label>Car Image</label>-->
+                    <label><i style="font-weight: bold;" name="image">Car Image &nbsp;&nbsp;&nbsp;<a href="/media/{{car.image}}/">View Image</a></i></label>
+                    <input type="file" class="form-control" value="{{car.image}}" name="image">
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="form-group col-md-12">
+                    <label>Capacity</label>
+                    <input type="number" class="form-control" name="capacity" value="{{car.capacity}}" placeholder="Number of Seats">
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="form-group col-md-12">
+                    <label>Rent</label>
+                    <input type="number" class="form-control" name="rent" value="{{car.rent}}" placeholder="Rent (per day)">
+                </div>
+            </div>
+    
+            <button type="submit" class="btn mt-3">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Car added successfully.")
+    document.location = "/add_car"
+    {% endif %}
+</script>
+{% endblock %}
+

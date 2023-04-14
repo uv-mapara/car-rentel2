@@ -1,0 +1,156 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>CarRental</Name>
+    <RootNamespace>CarRental</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b859f17d-da82-404b-8a4e-a1345ead0443</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>CarRental.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app1\admin.py" />
+    <Compile Include="app1\apps.py" />
+    <Compile Include="app1\migrations\__init__.py" />
+    <Compile Include="app1\models.py" />
+    <Compile Include="app1\tests.py" />
+    <Compile Include="app1\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app1\views.py" />
+    <Compile Include="app1\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="CarRental\__init__.py" />
+    <Compile Include="CarRental\settings.py" />
+    <Compile Include="CarRental\urls.py" />
+    <Compile Include="CarRental\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app1\static\css\all-cars.css" />
+    <Content Include="app1\static\css\car-rent.css" />
+    <Content Include="app1\static\css\confirm-details.css" />
+    <Content Include="app1\static\css\customer-homepage.css" />
+    <Content Include="app1\static\css\customer-login.css" />
+    <Content Include="app1\static\css\customer-signup.css" />
+    <Content Include="app1\static\css\dealer-login.css" />
+    <Content Include="app1\static\css\dealer-signup.css" />
+    <Content Include="app1\static\css\home.css" />
+    <Content Include="app1\static\css\order-details.css" />
+    <Content Include="app1\static\css\past_orders.css" />
+    <Content Include="app1\static\css\search-result.css" />
+    <Content Include="app1\static\css\update-car.css" />
+    <Content Include="app1\static\js\car_rent.js" />
+    <Content Include="app1\static\js\confirm-details.js" />
+    <Content Include="app1\templates\add_car.html" />
+    <Content Include="app1\templates\all_cars.html" />
+    <Content Include="app1\templates\all_orders.html" />
+    <Content Include="app1\templates\base.html" />
+    <Content Include="app1\templates\car_dealer_login.html" />
+    <Content Include="app1\templates\car_dealer_navbar.html" />
+    <Content Include="app1\templates\car_dealer_signup.html" />
+    <Content Include="app1\templates\car_rent.html" />
+    <Content Include="app1\templates\confirm-details.html" />
+    <Content Include="app1\templates\customer_homepage.html" />
+    <Content Include="app1\templates\customer_login.html" />
+    <Content Include="app1\templates\customer_navbar.html" />
+    <Content Include="app1\templates\customer_signup.html" />
+    <Content Include="app1\templates\earnings.html" />
+    <Content Include="app1\templates\index.html" />
+    <Content Include="app1\templates\order_details.html" />
+    <Content Include="app1\templates\search_results.html" />
+    <Content Include="app1\templates\success.html" />
+    <Content Include="app1\templates\update_car.html" />
+    <Content Include="app1\__pycache__\admin.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="app1\__pycache__\apps.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="app1\__pycache__\models.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\models.cpython-38.pyc" />
+    <Content Include="app1\__pycache__\urls.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="app1\__pycache__\views.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\views.cpython-38.pyc" />
+    <Content Include="app1\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="app1\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="db.sqlite3" />
+    <Content Include="media\app-browse-artists.png" />
+    <Content Include="media\scorpio-classic-exterior-right-front-three-quarter.jpeg" />
+    <Content Include="media\tharr.jpeg" />
+    <Content Include="media\tharr_T0LaoeG.jpeg" />
+    <Content Include="media\Toyota-Fortuner-110120211829.jpg" />
+    <Content Include="media\ver.jpg" />
+    <Content Include="media\verna.jpg" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app1\" />
+    <Folder Include="app1\migrations\" />
+    <Folder Include="app1\static\" />
+    <Folder Include="app1\static\css\" />
+    <Folder Include="app1\static\js\" />
+    <Folder Include="app1\templates\" />
+    <Folder Include="app1\__pycache__\" />
+    <Folder Include="CarRental\" />
+    <Folder Include="media\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

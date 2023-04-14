@@ -1,0 +1,24 @@
+.rent-section .head{
+    margin-top: 100px;
+    font-family: var(--montserrat);
+}
+.rent-section .card img{
+    height: 200px;
+    width: 100%;
+}
+.rent-section .card h5{
+    font-family: var(--montserrat);
+}
+.rent-section .card h6{
+    font-family: var(--montserrat);
+}
+.rent-section .card p{
+    font-family: var(--montserrat);
+}
+.rent-section .card .btn{
+    font-family: var(--montserrat);
+    text-align: center;
+    color: var(--white-color);
+    width: 100%;
+    background-color: var(--main-color);
+}

@@ -1,0 +1,37 @@
+{% extends 'customer_navbar.html' %}
+{% block title %}Confirm Details{% endblock %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/confirm-details.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="order-details">
+    <div class="container">
+        <h3>Order Confirm</h3>
+        <div method="POST">
+            {% csrf_token %}
+            <div class="detail">
+                <b>Total Rent :</b><input name="rent" id="rent" value="₹ {{rent}}" readonly /> <br><br>
+                <b>Vehicle :</b><input name="carname" id="carname" value=" {{car.name}}" readonly /> <br><br>
+                <b>Days :</b><input name="days" id="days" value=" {{days}}" readonly /><br><br>
+                <b>Date :</b><input name="date" id="date" value=" {{date}}" readonly /><br><br>
+                <b>Car-Dealer :</b><input name="car_dealer" id="car_dealer" value=" {{car_dealer}}" readonly /> <br><br>
+                <b>Car-Dealer's Contact:</b><input name="car_dealer_phone" id="car_dealer_phone" value=" {{car_dealer.phone}}" readonly /> <br><br>
+                <input type="text" value="{{order_id}}" name="order_id" id="order_id" hidden />
+                <input value="{{payment}}" name="payment" id="payment" hidden />
+                <input value="{{car.id}}" name="CarId" id="CarID" hidden />
+
+                <input type="submit" class="btn" id="BtnConfirm" value="Confirm Rent Now" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{% static 'js/confirm-details.js' %}"></script>
+{% endblock %}

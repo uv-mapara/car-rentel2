@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %} Customer Login {% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/customer-login.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<section class="customer-login"> 
+    <!-- <form method="POST">
+        {% csrf_token %}
+        <div class="">
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for i in messages %}
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{i}}
+                {% endfor %}
+            </div>
+            {% endif %}
+    
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+    
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+    
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+            <br>
+            <button type="submit" class="btn" style="background-color: #71cc0971; font-size: 22px; width: 8rem;">Login</button>
+        </div>
+
+       
+    </form> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="log-form">
+                <div class="col-12 col-xl-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Customer login</h2>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="email" id="id_user_name">
+                                    <div class="place-email">
+                                        Email
+                                    </div>
+                                </div>
+                                <div class="pass">
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        name="password" requiredid="id_password">
+                                        <div class="place-pass">
+                                            Password
+                                        </div>
+                                </div>                                
+
+                                <button type="submit" name="login" class="btn login-btn">Login</button>
+
+                                <div class="dont-ac">
+                                    <p>Don't Have an account ? <span> <a href="{% url 'customer_signup' %}">Sign
+                                    up</a></span>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock %}
+{% block js %}
+<script>
+  {% if alert %}
+  alert("Invalid Credentials")
+  document.location = "/customer_login"
+  {% endif %}
+</script>
+{% endblock %}

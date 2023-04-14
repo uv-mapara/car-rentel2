@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} Rent Cars {% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container rent-section">
+        <div class="head">
+            <h1 class="">Car Rental System</h1>
+            <p class="lead">You can select from the wide range of Cars availabe.</p>
+            <hr class="my-4">
+        </div>
+
+        <div class="row mt-4">
+            {% for car in cars %}
+            <div class="col-sm-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{car.image.url}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{car.name}}</h5>
+                        {% comment %} <h6 class="card-text">{{car.car_dealer}}</b></h6> {% endcomment %}
+                        <p class="card-text">Rent: ₹{{car.rent}} per day</p>
+                        <a href="/customer_login/" class="btn">Login to Rent </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

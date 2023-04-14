@@ -1,0 +1,74 @@
+.dealer-login{
+    margin-top: 150px;
+}
+.dealer-login a{
+    text-decoration: none;
+}
+.dealer-login .log-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 140px; */
+    margin-bottom: 64px;
+}
+.dealer-login .card .login-btn {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    width: 100%;
+    font-family: var(--montserrat);
+    font-weight: 500;
+    font-size: 16px;    
+    /* border-radius: 50px; */
+    letter-spacing: 1px;
+    box-shadow: 0 0 0 0 !important;
+}
+
+
+.log-form .place-email,
+.log-form .place-pass {
+    position: absolute;
+    font-family: var(--montserrat);
+    top: -9px;
+    padding: 0 5px;
+    font-size: 12px;
+    left: 19px;
+    background-color: var(--white-color);
+}
+
+.log-form .email {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.log-form .pass {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.log-form input {
+    /* padding-top: 10px; */
+    font-family: var(--montserrat);
+    font-size: 15px;
+    padding: 10px 10px 6px 10px;
+}
+
+.log-form .forgot-btn {
+    margin-bottom: 13px;
+}
+
+.log-form .forgot-btn a {
+    font-family: var(--montserrat);
+    font-size: 14px;
+}
+
+.log-form .dont-ac {
+    margin-top: 13px;
+    font-family: var(--montserrat);
+    font-size: 14px;
+}
+
+.log-form h2 {
+    margin-bottom: 30px;
+    font-family: var(--poppins);
+    font-size: 25px;
+}

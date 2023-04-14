@@ -1,0 +1,58 @@
+{% extends 'customer_navbar.html' %}
+{% block title %} Car Dealer Login {% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/past_orders.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<section class="dealer-login" style="margin-top:150px;">
+    <div class="container">
+        {% if all_orders %}
+        <h1 class="mt-4">Past Orders</h1>
+        <div class="users-table mt-4">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="text-center">Car Name</th>
+                        <th class="text-center">Image</th>
+                        <th class="text-center">Days</th>
+                        <th class="text-center">Rent</th>
+                        <th class="text-center">Capacity</th>
+                        <th class="text-center">Payment</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                    {% for order in all_orders %}
+                    <tr>
+                        <td class="text-center">{{order.car.name}}</td>
+                        <td class="text-center"><img src="{{order.car.image.url}}" alt="" width="100px" height="100px"></td>
+                        <td class="text-center">{{order.days}}</td>
+                        <td class="text-center">₹ {{order.rent}}</td>
+                        <td class="text-center">{{order.car.capacity}}</td>
+                        <td class="text-center">
+                            {% if order.paid == True %}
+                            <button style="padding:2px 5px;border:none;background-color:green;outline:none;color:white;">Paid</button>
+                            {% else %}
+                            <button style="padding:2px 5px;background-color:yellow;color:white">Pending</button>
+                            {% endif %}
+                        </td>
+                        <td class="text-center"><a href="{% url 'delete_order' order.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete {{order.car.name}}?')">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <br>
+        <h2 class="text-dark text-center">No Past Orders</h2>
+        {% endif %}
+    </div>
+</section>
+
+
+
+
+{% endblock %}

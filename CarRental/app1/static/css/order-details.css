@@ -1,0 +1,12 @@
+.order-details{
+    text-align: center;
+    font-family: var(--montserrat);
+    width: 30%;
+    margin: auto;
+}
+.order-details .container{
+    margin-top: 100px !important;
+}
+.order-details .detail{
+    text-align: left;
+}
